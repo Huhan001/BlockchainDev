@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Register</title>
+	</head>
+	<body>
+		<div>
+		<form>
+			<!-- use GET instead of FORM ( command + /) -->
+
+			Fist Name: <input type="text" name="Fist name"><br>
+			Last Name: <input type="text" name="last name"><br>
+			Birthday:  <input type="date" name="dob"><br>
+
+			Gender: <br> 
+			<input type="radio" name="Gender" value="man"> Male<br>
+			<input type="radio" name="Gender" value="lady"> Female<br>
+
+			Cars: <br>
+			<select name="Cars">
+				<option value="volvo">Volvo</option>
+				<option value="Audi">Audi</option>
+			</select><br>
+
+			Pets: <br>
+			<input type="checkbox" name="dog">Dog<br>
+			<input type="checkbox" name="cat">Cat<br>
+
+			Email: <input type="email" required name="email"><br>
+			Password: <input type="password" min="5" name="password"><br>
+
+
+			<input type="submit" value="Register!">
+			<input type="reset">
+		</form>
+	<!-- </div> div is used to separate in between fields -->
+</div>
+
+	</body>
+</html>
