@@ -1,0 +1,10 @@
+.container >.row >.col {
+	border: 3px solid rgba(230, 149, 11, 0.6);
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.progress {
+	display: flex;
+	width: 100px;
+}
