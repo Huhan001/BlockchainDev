@@ -1,0 +1,78 @@
+body {
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 200px 200px 208px 200px;
+    grid-template-rows: 100px 100px 200px 200px 200px;
+    grid-column-gap: 10px;
+    border-radius:4px;
+}
+
+input {
+    grid-row: 2/3;
+    grid-column: 2;
+    height: 100px;
+    width: 150px;
+    border-radius: 4px;
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+.btn {
+    grid-row: 3/4;
+    grid-column: 2;
+    height: 40px;
+    width: 150px;
+}
+
+.first {
+    font-family: Menlo;
+    border: 2px solid green;
+    border-radius: 10px;
+    grid-row: 1;
+    grid-column: 3/5;
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    height: 90px;
+    text-justify: distribute-center-last;
+    text-align: center;
+    background-color: green;
+}
+
+.second {
+    font-family: Menlo;
+    grid-row: 2/3;
+    grid-column: 3/5;
+    border: 2px solid red;
+    border-radius: 10px;
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    justify-content: center;
+    text-align: center;
+    text-justify: distribute-center-last;
+    
+}
+
+.paragrapghs {
+    display: flex;
+    font-family: Menlo;
+    color: orange;
+    border: 2px solid orange;
+    border-radius: 10px;
+    grid-row: 3/6;
+    grid-column: 3/5;
+    justify-content: center;
+    text-align: center;
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+/*    background-image: url("https://i.pinimg.com/originals/b3/59/eb/b359eb60775b16e7edd8c5fa1ecf2ba7.gif");*/
+/*    background-size: contain;*/
+}
