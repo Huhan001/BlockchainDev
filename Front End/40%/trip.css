@@ -76,3 +76,36 @@ input {
 /*    background-image: url("https://i.pinimg.com/originals/b3/59/eb/b359eb60775b16e7edd8c5fa1ecf2ba7.gif");*/
 /*    background-size: contain;*/
 }
+
+/*==========================================
+New button / animations / delete and add list.
+============================================*/
+
+.newbutton {
+    grid-row: 3/4;
+    grid-column: 1;
+    height: 40px;
+    width: 140px;
+    animation: heartBeat;
+    animation-duration: 7s;
+    border-radius: 4px;
+    justify-self: end;
+
+    background-color: #dc3545;
+    color: #fff;
+    border: 1px solid #dc3545;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.newtext {
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+
+.first, .second {
+    justify-content: center;
+    padding-top: 25px;
+}

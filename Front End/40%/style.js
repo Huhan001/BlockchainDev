@@ -1,27 +1,79 @@
-var input = document.querySelector("input");
-var button = document.querySelector("button");
+//var input = document.querySelector("input");
+//var button = document.querySelector("button");
+//var ul = document.querySelector("ul");
+//
+//
+//
+//function inputlength(){
+//    return input.value.length;
+//}
+//
+//function event(){
+//    var li = document.createElement("li");
+//    li.appendChild(document.createTextNode(input.value))
+//    ul.appendChild(li)
+//    input.value = ""
+//}
+//
+//function checkfor() {
+//    if(inputlength() > 1) {
+//        event()
+//    }
+//}
+//
+//button.addEventListener("click",checkfor)
+
+//=======================================================================
+var bonyeza = document.querySelector("button");
+var newbutton = document.querySelector("body");
 var ul = document.querySelector("ul");
+var input = document.querySelector("input");
 
 
 
-function inputlength(){
-    return input.value.length;
+var child = document.querySelector("li");
+var parent = child.parentElement;
+//=======================================================================
+function bonya(){
+//   var newdiv = document.createElement("div");
+//  newdiv.appendChild(newr)
+    var newr = document.createElement("button");
+    newr.appendChild(document.createTextNode("Delete"));
+    newr.className = "newbutton";
+    newr.addEventListener("click",remove);
+    newbutton.appendChild(newr);
 }
 
-function event(){
+function addinglist() {
     var li = document.createElement("li");
-    li.appendChild(document.createTextNode(input.value))
-    ul.appendChild(li)
-    input.value = ""
+    li.appendChild(document.createTextNode(input.value));
+    ul.appendChild(li);
+    input.value = "";
 }
 
-function checkfor() {
-    if(inputlength() > 1) {
-        event()
+function parentlist() {
+    if (parent.children.length > 5) {
+        bonya();
     }
 }
+function remove() {
+    parent.removeChild(parent.lastElementChild);
+}
 
-button.addEventListener("click",checkfor)
+function inputing() {
+   return input.value.length;
+}
+function action() {
+    if (inputing() > 1) {
+        addinglist();
+    }
+    parentlist();
+}
+
+//=======================================================================
+
+bonyeza.addEventListener("click", action);
+//newbutton.addEventListener("click", remove);
 
 
 
@@ -36,6 +88,8 @@ button.addEventListener("click",checkfor)
 
 
 
+
+//===========================================================================
 //document.getElementsByTagName("h1")
 //document.getElementsByClassName("fist")
 //document.querySelector("h1")
