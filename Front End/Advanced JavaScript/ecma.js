@@ -87,3 +87,8 @@ console.log(reducedarray)
 // check wiht bard. 
 const flatmaps = array.flatMap(num => num > 3);
 console.log(flatmaps.at(true))
+
+// Advanced Objects.
+object.assign({}, obj)
+{...ob}
+to avoid the reference purpose. 
