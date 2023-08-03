@@ -89,6 +89,42 @@ const flatmaps = array.flatMap(num => num > 3);
 console.log(flatmaps.at(true))
 
 // Advanced Objects.
-object.assign({}, obj)
-{...ob}
-to avoid the reference purpose. 
+//object.assign({}, obj)
+//{...ob}
+////to avoid the reference purpose.
+//// for low level cloning.
+//JSON.strings()
+
+
+//=======================================================================
+//passsby reference
+//=======================================================================
+let obj = {name:"you", pass:"wording",place:"timing"};
+let obj1 = obj;
+
+obj1.place = "checkme";
+console.log(obj);
+
+var c = [1,2,3,4,5,6];
+var d = c;
+d.push(1234);
+console.log(c);
+var v = [].concat(c);
+
+let obj2 = Object.assign({},obj);
+obj2.name = "stance";
+console.log(obj);
+let obj3 = {...obj2};  // another new way to clone object
+console.log(obj3);
+
+// jsong super clone
+// this will clone everything and all other small parts or details within.
+
+let superclone = JSON.parse(JSON.stringify(obj));
+console.log(superclone);
+
+
+//=======================================================================
+// type coercion.
+//=======================================================================
+
