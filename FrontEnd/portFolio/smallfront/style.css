@@ -1,0 +1,124 @@
+body {
+    display: flex;
+    background-color: mistyrose;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+}
+
+#outerlayer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+    border: 3px solid lightblue;
+    background-color: gray;
+    border-radius: 30px;
+    
+    margin-top: 15%;
+    margin-bottom: 25%;
+    
+    width: 400px;
+    height: 400px;
+
+    background-color: lightblue;
+    box-shadow: 0 0 10px gray;
+}
+
+#walls {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    align-self: center;
+    
+    margin-left: 10%;
+    margin-right: 10%;
+    
+/*    width: 90%;*/
+/*    height: 100%;*/
+    
+    background-color: lightblue;
+
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    align-content: center*/
+    
+}
+
+img {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: start;
+    align-content: start;
+    align-items: start;
+    
+    padding-bottom: 40px;
+}
+
+ul,button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+/*    border: 3px solid green;*/
+/*    border-radius: 15px;*/
+/*    */
+/*    width: 250px;*/
+/*    height: 70px;*/
+    
+    align-self: center;
+/*    justify-content: center;*/
+    align-items: center;
+    align-content: center;
+    list-style-type: none;
+    
+    padding-right: 35px;
+    
+/*    background-color: orange;*/
+    
+    grid-gap: 20px;
+}
+
+li, img{
+    display: flex;
+    border: 2px solid lightskyblue;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px ;
+    background-color: lightskyblue;
+    box-shadow: 0 0 10px gray;
+}
+
+li {
+    font-family: Menlo;
+    font-size: 20px;
+    color: white;
+}
+
+button {
+    width: 200px;
+    margin-left: 20px;
+    box-shadow: 0 0 10px gray;
+    background-color: lightskyblue;
+}
+
+h3, p {
+    color: white;
+    font-family: Menlo;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+.btn-outline-info {
+    border-color: lightskyblue;
+}
+
+html {
+    background-color: black;
+}
