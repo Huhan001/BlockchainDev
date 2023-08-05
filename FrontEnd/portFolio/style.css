@@ -1,0 +1,101 @@
+body {
+    background-color: lightgray;
+}
+
+.layer {
+    display: grid;
+    grid-template-columns: 10% 25% 25% 25%;
+    grid-template-rows: repeat(7, 88px) 42px;
+    
+}
+
+.layer .kontena {
+    grid-column: 2;
+    grid-row: 2/8;
+    border: 0.1px solid #EF8923;
+    background: #EF8923; 
+
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    
+    text-align: center;
+    padding-top: 30px;
+    
+    
+}
+
+
+.heading {
+    grid-row-end: 4;
+    font-family: Menlo;
+    font-size: 25px;
+    padding-left: 30px;
+}
+
+.secondheading {
+    grid-row: 5;
+    font-family: Menlo;
+    font-size: 15px;
+    padding-left: 30px;
+    padding-right: 40px;
+}
+
+.btn-light {
+    grid-row: 6;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    animation: animate__heartBeat;
+    animation-duration: 2s;
+}
+/*===========================================================================*/
+/*boat*/
+/*===========================================================================*/
+
+.layer .boat {
+    grid-column: 3;
+    grid-row: 2/8;
+    border: 0.1px solid #009193;
+
+    background-color: #009193;
+
+    text-align: center;
+    padding-top: 30px;
+
+}
+
+
+
+/*===========================================================================*/
+/*plane*/
+/*===========================================================================*/
+
+.layer .plane {
+    grid-column: 4;
+    grid-row: 2/8;
+    border: 0.1px solid #5F9EA0;
+    
+    background-color: #5F9EA0;
+
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
+    text-align: center;
+    padding-top: 30px;
+    justify-content: space-evenly;
+    
+
+}
+
+hr {
+    margin: 10px auto;
+    color: white;
+    border: 1px solid white;
+    max-width: 65px;
+    opacity: 1;
+}
+
+h1, h4 {
+    color: white;
+    text-align: left;
+}
