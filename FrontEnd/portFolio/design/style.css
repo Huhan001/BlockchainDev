@@ -1,0 +1,135 @@
+body {
+    display: flex;
+    align-items: center;
+    
+    background-color: darkslategray;
+    box-sizing: border-box;
+    flex-direction: column;
+    
+    height: 100vh;
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    border-radius: 20px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: hsl(225, 100%, 98%);
+    width: 80%;
+/*    box-shadow: 0 1px 1px 0px hsl(225, 100%, 94%);*/
+}
+
+.person-image {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+h1 {
+    color: hsl(223, 47%, 23%);
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.order-container {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.order-summary p {
+    color: hsl(224, 23%, 55%);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.price {
+    background-color: hsla(225, 100%, 94%, 0.319);
+    border-radius: 10px;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 0.8fr 1.5fr 2fr;
+/*    justify-content: space-evenly;*/
+/*    justify-items: stretch;*/
+    width: 90%;
+    
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+h2 {
+    color:  hsl(223, 47%, 23%);
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    padding: 0 3px;
+}
+
+.music-icon, .price a {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pricing-plan p {
+    color: hsl(224, 23%, 55%);
+    font-size: 0.8rem;
+    margin-top: 0;
+}
+.price a {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.button > * {
+    border: none;
+    display: block;
+    /* font-size: 1.5rem; */
+    font-weight: 700;
+    margin: 10px auto;
+    width: 90%;
+}
+
+.proceed{
+    background-color: hsl(245, 75%, 52%);
+    border-radius: 10px;
+    box-shadow: 0 15px 5px 1px hsl(225, 100%, 94%);
+    color: hsl(225, 100%, 98%);
+    padding: 10px;
+}
+
+.cancel {
+    background: none;
+    color: hsl(224, 23%, 55%);
+    margin-top: 20px;
+}
+
+@media (min-width: 680px) and (max-width:990px) {
+    .container {
+        width: 40%;
+    }
+}
+@media (min-width: 1000px) {
+    .container {
+        width: 30%;
+    }
+}
+
+@media (min-width: 1000px) and (max-width:1300px){
+
+    .order-summary p {
+        font-size: 1rem;
+    }
+    .button > * {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1400px ) and (max-width: 1600px){
+    .order-summary p {
+        font-size: 1.2rem;
+    }
+    .button > * {
+        font-size: 1.3rem;
+    }
+}
