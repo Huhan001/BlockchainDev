@@ -3,21 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
-import Card from "./Card";
-import {robots} from "./robots";
+import App from "./App";
 
 
 
-const one = () => {
-  return (
-    <div>
-      {robots.map(robot => (
-        <Card id={robot.id} name={robot.name} email={robot.email}/>
-        ))}
-    </div>
-    );
-}
-ReactDOM.createRoot(document.getElementById('root')).render(one())
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>)
 
 // so we shall always want to return one thing when using react.
 

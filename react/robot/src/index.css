@@ -5,9 +5,36 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-image: linear-gradient(mediumpurple,lightgreen,lightblue);
+  font-family: Menlo;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+img {
+  width: 150px;
+  height: 170px;
+}
+
+.headingfont {
+  font-size: 50px;
+  color: #313a47;
+}
+
+.lineinmiddle {
+  width: 70px;
+  height: 2px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+input {
+  border-radius: 10px;
+  padding-bottom: 10px;
+  align-items: center;
 }
