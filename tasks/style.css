@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    background-color: lightblue;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    box-shadow: lightblue;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.summary {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 300px;
+    height: auto;
+    
+    font-family: Menlo;
+    justify-content: space-evenly;
+    align-content: space-between;
+    gap: 7px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 30px;
+/*    mso-border-shadow: yes;*/
+/*    box-shadow: blue;*/
+}
+
+.range {
+    display: grid;
+    grid-template-columns: 0.5fr 1.9fr 1fr;
+    justify-content: space-around;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: auto;
+    height: 52px;
+    grid-column-gap: 10px;
+    padding-right: 10px;
+}
+
+.insider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    align-content: space-evenly;
+    padding-bottom: 9px;
+}
+
+svg {
+    margin-left: 15px;
+    width: 23px;
+    height: 23px;
+}
+
+button {
+    margin-top: 10px;
+    width: 240px;
+    margin-left: 35px;
+    height: 40px;
+    border-radius: 30px;
+    margin-bottom: 27px;
+    background-color: #3e486e;
+    font-size: 19px;
+    color: white;
+    border-bottom: none;
+    cursor: pointer;
+}
+
+
+.insider .displayed {
+    font-weight: bold;
+    color: darkslategray;
+    font-size: 20px;
+}
+/*===================================================================================*/
+/*theremometer display*/
+/*===================================================================================*/
+
+.theremometer {
+    display: flex;
+    flex-direction: column;
+/*    align-content: center;*/
+    align-items: center;
+    
+    margin: auto;
+    width: 300px;
+    height: 400px;
+    
+    border: 1px solid blue;
+    border-radius: 20px;
+    
+    font-family: Menlo;
+    color: white;
+    
+    background-image: linear-gradient(hsl(241,90%,31%) 20%, hsl(231,85%,35%) 25%);
+    
+}
+
+.circle {
+    margin: 0 auto;
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    background-image: linear-gradient(hsl(241,81%,54%), rgba(78,33,202,0.041));
+    
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.theremometer-tet {
+    margin-top: 40px;
+    margin-left: 10px;
+    animation: heartBeat;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.result-quality {
+    font-weight: 700;
+    font-size: 20px;
+    color: hsl(221,100%,96%);
+}
+
+.result-description {
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+}
