@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-image: linear-gradient(mediumpurple,lightgreen,lightblue);
+  background-image: linear-gradient(orange,lightblue, orange);
   font-family: Menlo;
 }
 
