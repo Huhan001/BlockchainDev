@@ -3,6 +3,7 @@ import Card from "../components/Card";
 import '../index.css'
 import Searchbox from "../components/Searchbox";
 import Scroll from "../components/scroll";
+import ErrorBoundary from "../components/ErrorBoundary";
 
 
 
@@ -44,11 +45,13 @@ class App extends Component {
                         <Searchbox searchChange = {this.onSearchchange}/>
                     </div>
                     <Scroll>
+                        <ErrorBoundary>
                     <div className= 'shadow-5'>
                         {filteredrobots.map(robot => (
                             <Card key = {robot.name} id={robot.id} name={robot.name} email={robot.email}/>
                             ))}
                     </div>
+                        </ErrorBoundary>
                     </Scroll> 
                 </div>
                 );
