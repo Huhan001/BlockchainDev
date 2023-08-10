@@ -49,4 +49,4 @@ Object.entries(users).map(one => [one[0],one[1] * 2])
 
 //#8 change the output array of question #7 back into an object with all the users IDs updated to their new version. Should output: { user1: 36546, user2: 185666, user3: 180630 }
 let combo = Object.entries(users).map(one => [one[0],one[1] * 2]);
-{user1: 36546, user2: 185666, user3: 180630};
+console.log(Object.fromEntries(combo))
