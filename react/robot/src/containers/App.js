@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import Card from "../components/Card";
 import '../index.css'
 import Searchbox from "../components/Searchbox";
@@ -24,7 +24,7 @@ class App extends Component {
     const data = await response.json();
     this.setState({robots:data});
    }
-   
+
     // componentDidMount() {
     //     fetch('https://jsonplaceholder.typicode.com/users')
     //     .then(response => {
