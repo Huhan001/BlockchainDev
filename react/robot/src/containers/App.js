@@ -17,15 +17,22 @@ class App extends Component {
             searchfiled: ''
         }
     }
-    
-    componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => {
-           return  response.json();
-        }).then(users => {
-            this.setState({robots: users});
-        })
-    }
+   
+   componentDidMount = async () => {
+    const url = 'https://jsonplaceholder.typicode.com/users';
+    const response = await fetch(url);
+    const data = await response.json();
+    this.setState({robots:data});
+   }
+   
+    // componentDidMount() {
+    //     fetch('https://jsonplaceholder.typicode.com/users')
+    //     .then(response => {
+    //        return  response.json();
+    //     }).then(users => {
+    //         this.setState({robots: users});
+    //     })
+    // }
 
     onSearchchange = (event) => {
         this.setState({searchfiled: event.target.value});
