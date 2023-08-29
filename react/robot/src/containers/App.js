@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "../components/Card";
 import '../index.css'
 import Searchbox from "../components/Searchbox";
@@ -7,62 +7,51 @@ import ErrorBoundary from "../components/ErrorBoundary";
 
 
 
+function App() {
+    const [robots, setRobots] = useState([])
+    const [searchfiled, setSearchfiled] = useState("")
 
-// once more i must be working with classes, if i want the state to work. which i a way to access information
-class App extends Component {
-    constructor() {
-        super();
-        this.state = {
-            robots: [],
-            searchfiled: ''
+
+    useEffect(() => {
+        const fetching = async () => {
+            const url = 'https://jsonplaceholder.typicode.com/users';
+            const response = await fetch(url);
+            const data = await response.json();
+            setRobots(data);
         }
-    }
-   
-   componentDidMount = async () => {
-    const url = 'https://jsonplaceholder.typicode.com/users';
-    const response = await fetch(url);
-    const data = await response.json();
-    this.setState({robots:data});
-   }
+    fetching();
+        }, [])
 
-    // componentDidMount() {
-    //     fetch('https://jsonplaceholder.typicode.com/users')
-    //     .then(response => {
-    //        return  response.json();
-    //     }).then(users => {
-    //         this.setState({robots: users});
-    //     })
-    // }
 
-    onSearchchange = (event) => {
-        this.setState({searchfiled: event.target.value});
+    const onSearchchange = (event) => {
+        setSearchfiled(event.target.value);
     }
+
+    const filteredrobots = robots.filter(robots => {
+        return robots.name.toLocaleLowerCase().includes(searchfiled.toLocaleLowerCase());
+    })
+
     
-    render() {
-        const filteredrobots = this.state.robots.filter(robots => {
-            return robots.name.toLocaleLowerCase().includes(this.state.searchfiled.toLocaleLowerCase());
-        })
-        if (this.state.robots.length === 0) {
-            return <h1 className='tc'> Loading ...</h1>
-        } else {
-            return (
-                <div className= 'tc'>
-                    <div>
-                        <h1 className='headingfont'> Robot Friends</h1><hr className='lineinmiddle'/>
-                        <Searchbox searchChange = {this.onSearchchange}/>
-                    </div>
-                    <Scroll>
-                        <ErrorBoundary>
-                    <div className= 'shadow-5'>
-                        {filteredrobots.map(robot => (
-                            <Card key = {robot.name} id={robot.id} name={robot.name} email={robot.email}/>
-                            ))}
-                    </div>
-                        </ErrorBoundary>
-                    </Scroll> 
+    if (robots.length === 0) {
+        return <h1 className='tc'> Loading ...</h1>
+    } else {
+        return (
+            <div className= 'tc'>
+                <div>
+                    <h1 className='headingfont'> Robot Friends</h1><hr className='lineinmiddle'/>
+                    <Searchbox searchChange = {onSearchchange}/>
                 </div>
-                );
-        }
+                <Scroll>
+                    <ErrorBoundary>
+                        <div className= 'shadow-5'>
+                            {filteredrobots.map(robot => (
+                                <Card key = {robot.name} id={robot.id} name={robot.name} email={robot.email}/>
+                                ))}
+                        </div>
+                    </ErrorBoundary>
+                </Scroll>
+            </div>
+            );
     }
 }
 
