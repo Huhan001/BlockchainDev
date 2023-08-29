@@ -6,8 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-image: linear-gradient(orange,lightblue, orange);
+  background-image: linear-gradient(gray,mediumpurple);
   font-family: Menlo;
+  min-width: 100vh;
 }
 
 code {
